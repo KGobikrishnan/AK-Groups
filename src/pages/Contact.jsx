@@ -18,8 +18,8 @@ const Contact = () => {
   };
 
   return (
-    <main className="w-full min-h-screen bg-gray-50 pt-32 pb-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center border-t border-gray-200 relative">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white to-transparent z-0 opacity-80"></div>
+    <section className="w-full py-32 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative">
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gray-50 to-transparent z-0 opacity-80"></div>
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
         
         {/* Contact Info Side */}
@@ -30,7 +30,7 @@ const Contact = () => {
           className="space-y-8"
         >
           <div>
-            <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tight text-charcoal mb-4 uppercase leading-none">
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-charcoal mb-4 uppercase leading-none">
               Initiate <span className="text-corporate-red block">Contact.</span>
             </h1>
             <p className="text-lg text-gray-500 font-medium tracking-wide">
@@ -38,17 +38,17 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="space-y-8 mt-12 border-l border-corporate-red/30 pl-6">
+          <div className="space-y-8 mt-12 border-l border-corporate-red/50 pl-6">
             <div>
-              <h3 className="text-sm font-display font-bold text-charcoal uppercase tracking-[0.2em] mb-1">Command Center</h3>
+              <h3 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">Command Center</h3>
               <p className="text-gray-500 font-medium">AK Groups Complex,<br />Cumbum, Tamil Nadu, India</p>
             </div>
             <div>
-              <h3 className="text-sm font-display font-bold text-charcoal uppercase tracking-[0.2em] mb-1">Direct Secure Line</h3>
+              <h3 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">Direct Secure Line</h3>
               <p className="text-gray-500 font-medium">+91 (123) 456-7890</p>
             </div>
             <div>
-              <h3 className="text-sm font-display font-bold text-charcoal uppercase tracking-[0.2em] mb-1">Transmissions</h3>
+              <h3 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">Transmissions</h3>
               <p className="text-gray-500 font-medium">info@akgroups.com</p>
             </div>
           </div>
@@ -60,7 +60,7 @@ const Contact = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.2 }}
         >
-          <form className="bg-white rounded-none p-8 sm:p-10 shadow-floating border border-gray-200 space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="glass-panel p-8 sm:p-10 space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div className="space-y-4">
               <div>
                 <label htmlFor="name" className="sr-only">Full Name</label>
@@ -68,7 +68,7 @@ const Contact = () => {
                   type="text" 
                   id="name" 
                   placeholder="IDENTIFICATION" 
-                  className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-corporate-red focus:ring-0 rounded-none px-5 py-4 text-charcoal placeholder-gray-400 font-bold tracking-widest uppercase outline-none transition-all duration-300"
+                  className="w-full bg-white/50 border border-gray-200 focus:bg-white focus:border-corporate-red focus:ring-0 rounded-lg px-5 py-4 text-charcoal placeholder-gray-400 font-bold tracking-widest uppercase outline-none transition-all duration-300 shadow-inner"
                 />
               </div>
               
@@ -78,7 +78,7 @@ const Contact = () => {
                   type="email" 
                   id="email" 
                   placeholder="CONTACT FREQUENCY" 
-                  className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-corporate-red focus:ring-0 rounded-none px-5 py-4 text-charcoal placeholder-gray-400 font-bold tracking-widest uppercase outline-none transition-all duration-300"
+                  className="w-full bg-white/50 border border-gray-200 focus:bg-white focus:border-corporate-red focus:ring-0 rounded-lg px-5 py-4 text-charcoal placeholder-gray-400 font-bold tracking-widest uppercase outline-none transition-all duration-300 shadow-inner"
                 />
               </div>
 
@@ -88,7 +88,7 @@ const Contact = () => {
                   type="text" 
                   id="company" 
                   placeholder="AFFILIATION (OPTIONAL)" 
-                  className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-corporate-red focus:ring-0 rounded-none px-5 py-4 text-charcoal placeholder-gray-400 font-bold tracking-widest uppercase outline-none transition-all duration-300"
+                  className="w-full bg-white/50 border border-gray-200 focus:bg-white focus:border-corporate-red focus:ring-0 rounded-lg px-5 py-4 text-charcoal placeholder-gray-400 font-bold tracking-widest uppercase outline-none transition-all duration-300 shadow-inner"
                 />
               </div>
               
@@ -98,7 +98,7 @@ const Contact = () => {
                   id="message" 
                   rows="4" 
                   placeholder="TRANSMIT MESSAGE" 
-                  className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-corporate-red focus:ring-0 rounded-none px-5 py-4 text-charcoal placeholder-gray-400 font-bold tracking-widest uppercase outline-none transition-all duration-300 resize-none"
+                  className="w-full bg-white/50 border border-gray-200 focus:bg-white focus:border-corporate-red focus:ring-0 rounded-lg px-5 py-4 text-charcoal placeholder-gray-400 font-bold tracking-widest uppercase outline-none transition-all duration-300 resize-none shadow-inner"
                 ></textarea>
               </div>
             </div>
@@ -106,7 +106,7 @@ const Contact = () => {
             <button 
               type="submit"
               onClick={handleButtonClick}
-              className="relative w-full overflow-hidden bg-corporate-red hover:bg-corporate-darkred text-white font-display font-bold text-xl tracking-[0.2em] uppercase rounded-none px-5 py-4 transition-colors duration-300 focus:outline-none flex justify-center group"
+              className="relative w-full overflow-hidden bg-corporate-red hover:bg-corporate-darkred text-white font-bold text-xl tracking-[0.2em] uppercase rounded-full px-5 py-4 transition-colors duration-300 focus:outline-none flex justify-center group shadow-[0_0_15px_rgba(225,29,72,0.4)]"
             >
               <span className="relative z-10 flex items-center gap-2">
                 Execute
@@ -133,7 +133,7 @@ const Contact = () => {
         </motion.div>
 
       </div>
-    </main>
+    </section>
   );
 };
 

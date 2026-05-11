@@ -13,27 +13,27 @@ const newsItems = [
 
 const VerticalMarquee = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-charcoal text-white overflow-hidden relative">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center glass-panel p-8 md:p-12">
         
         <div className="md:w-1/3">
           <motion.h2 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-display font-bold uppercase tracking-tight"
+            className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-charcoal"
           >
             Group <span className="text-corporate-red">Updates</span>
           </motion.h2>
-          <p className="mt-4 text-gray-400 text-sm tracking-widest uppercase">
+          <p className="mt-4 text-gray-500 text-sm tracking-widest uppercase">
             The latest momentum across the AK Ecosystem.
           </p>
         </div>
 
         <div className="md:w-2/3 h-64 overflow-hidden relative border-l border-gray-700 pl-8">
           {/* Gradient Masks */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-charcoal to-transparent z-10 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-charcoal to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/80 to-transparent z-10 pointer-events-none" />
 
           <motion.div
             animate={{ y: ["0%", "-50%"] }}
@@ -47,7 +47,7 @@ const VerticalMarquee = () => {
             {newsItems.map((item, index) => (
               <div key={index} className="flex flex-col">
                 <span className="text-corporate-red text-xs font-bold uppercase tracking-widest mb-1">{item.date}</span>
-                <h4 className="text-xl font-display text-gray-200">{item.title}</h4>
+                <h4 className="text-xl font-bold text-charcoal">{item.title}</h4>
               </div>
             ))}
           </motion.div>

@@ -15,14 +15,14 @@ const images = [
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = React.useState(null);
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white" id="gallery">
+    <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden" id="gallery">
       <motion.div
         initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         className="mb-16 text-center"
       >
-        <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tight text-charcoal mb-4 uppercase">
+        <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-charcoal mb-4 uppercase">
           Visual <span className="text-corporate-red">Showcase</span>
         </h2>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto tracking-[0.1em] font-medium">
@@ -30,7 +30,7 @@ const Gallery = () => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-none md:grid-rows-3 gap-4 h-auto md:h-[800px]">
+      <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-3 gap-2 md:gap-4 h-auto md:h-[800px]">
         {images.map((image, index) => (
           <motion.div
             key={image.id}
@@ -39,19 +39,19 @@ const Gallery = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: index * 0.1, duration: 0.6 }}
             onClick={() => setSelectedImage(image)}
-            className={`relative overflow-hidden group border border-gray-200 bg-gray-50 cursor-pointer ${image.span}`}
+            className={`relative overflow-hidden group glass-panel p-1 md:p-2 cursor-pointer aspect-square md:aspect-auto ${image.span}`}
           >
-            <div className="absolute inset-0 bg-corporate-red/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
+            <div className="absolute inset-0 bg-corporate-red/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none rounded-[1rem] md:rounded-[1.5rem]" />
             <img 
               src={image.src} 
               alt={`Gallery Image ${image.id}`}
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s]"
+              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] rounded-[1rem] md:rounded-[1.5rem]"
               loading="lazy"
             />
             {/* Overlay hint */}
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-center justify-center">
-              <span className="text-white font-bold tracking-widest uppercase text-sm border border-white/50 px-4 py-2 hover:bg-white hover:text-black transition-colors">
-                View Project Specs
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-center justify-center rounded-[1rem] md:rounded-[1.5rem]">
+              <span className="text-white font-bold tracking-widest uppercase text-[8px] md:text-sm border border-white/50 px-2 py-1 md:px-4 md:py-2 hover:bg-white hover:text-black transition-colors">
+                View
               </span>
             </div>
           </motion.div>
@@ -74,11 +74,11 @@ const Gallery = () => {
               exit={{ x: '100%', opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-5xl h-full max-h-[80vh] bg-white flex flex-col md:flex-row overflow-hidden border border-gray-200 shadow-2xl"
+              className="relative w-full max-w-5xl h-full max-h-[80vh] glass-panel flex flex-col md:flex-row overflow-hidden shadow-2xl"
             >
               <button 
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 z-50 p-2 bg-white/50 hover:bg-white backdrop-blur text-charcoal rounded-full transition-colors"
+                className="absolute top-4 right-4 z-50 p-2 bg-white/50 hover:bg-white backdrop-blur border border-gray-200 text-charcoal rounded-full transition-colors shadow-sm"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -87,22 +87,22 @@ const Gallery = () => {
                 <img src={selectedImage.src} alt="Project detail" className="w-full h-full object-cover" />
               </div>
 
-              <div className="md:w-1/3 p-8 md:p-12 flex flex-col bg-charcoal text-white overflow-y-auto">
-                <h3 className="text-3xl font-display font-bold uppercase mb-2">Project <span className="text-corporate-red">Specs</span></h3>
+              <div className="md:w-1/3 p-8 md:p-12 flex flex-col bg-white/50 backdrop-blur-xl border-l border-gray-200 text-charcoal overflow-y-auto">
+                <h3 className="text-3xl font-bold uppercase mb-2">Project <span className="text-corporate-red">Specs</span></h3>
                 <div className="w-12 h-1 bg-corporate-red mb-8" />
 
                 <div className="space-y-8 flex-grow">
                   <div>
-                    <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">Location</h4>
-                    <p className="text-xl font-display">{selectedImage.specs.location}</p>
+                    <h4 className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-1">Location</h4>
+                    <p className="text-xl font-bold text-charcoal">{selectedImage.specs.location}</p>
                   </div>
                   <div>
-                    <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">Duration</h4>
-                    <p className="text-xl font-display">{selectedImage.specs.duration}</p>
+                    <h4 className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-1">Duration</h4>
+                    <p className="text-xl font-bold text-charcoal">{selectedImage.specs.duration}</p>
                   </div>
                   <div>
-                    <h4 className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">Materials Used</h4>
-                    <p className="text-xl font-display">{selectedImage.specs.materials}</p>
+                    <h4 className="text-gray-500 text-xs font-bold uppercase tracking-widest mb-1">Materials Used</h4>
+                    <p className="text-xl font-bold text-charcoal">{selectedImage.specs.materials}</p>
                   </div>
                 </div>
 

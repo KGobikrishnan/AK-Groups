@@ -13,7 +13,7 @@ const tickerContent = messages.join(" ");
 
 const LiveTicker = () => {
   return (
-    <div className="w-full bg-corporate-red text-white py-3 overflow-hidden whitespace-nowrap flex items-center border-y border-red-800">
+    <div className="w-full backdrop-blur-md bg-corporate-red/80 text-white py-3 overflow-hidden whitespace-nowrap flex items-center border-y border-white/20">
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
         transition={{ 

@@ -27,7 +27,7 @@ const Legacy = () => {
   ];
 
   return (
-    <main className="w-full min-h-screen bg-white pt-32 pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="w-full py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       
       <div className="max-w-7xl mx-auto relative z-10">
         
@@ -38,7 +38,7 @@ const Legacy = () => {
           transition={{ type: 'spring', stiffness: 100, damping: 20 }}
           className="text-center mb-24"
         >
-          <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tight text-charcoal mb-6 uppercase">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-charcoal mb-6 uppercase">
             Building the <span className="text-corporate-red">Future.</span>
           </h1>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto tracking-[0.2em] uppercase font-bold">
@@ -63,10 +63,10 @@ const Legacy = () => {
                 transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.2 }}
                 className="lg:w-1/2 space-y-6"
               >
-                <div className="inline-block text-corporate-red font-display font-bold tracking-[0.3em] uppercase text-sm mb-2 border-b border-corporate-red/30 pb-2">
+                <div className="inline-block text-corporate-red font-bold tracking-[0.3em] uppercase text-sm mb-2 border-b border-corporate-red/50 pb-2">
                   0{index + 1} // Phase
                 </div>
-                <h2 className="text-5xl md:text-6xl font-display font-bold text-charcoal uppercase leading-none">
+                <h2 className="text-5xl md:text-6xl font-bold text-charcoal uppercase leading-none">
                   {section.title}
                 </h2>
                 <p className="text-lg text-gray-500 leading-relaxed font-medium">
@@ -82,13 +82,13 @@ const Legacy = () => {
                 transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.4 }}
                 className="lg:w-1/2 relative"
               >
-                <div className="absolute inset-0 bg-corporate-red transform translate-x-4 translate-y-4 -z-10 opacity-20"></div>
-                <div className="relative overflow-hidden group aspect-[4/3] border border-gray-200 bg-gray-50">
+                <div className="absolute inset-0 bg-corporate-red transform translate-x-4 translate-y-4 -z-10 opacity-20 rounded-[2rem]"></div>
+                <div className="relative overflow-hidden group aspect-[4/3] glass-panel p-2">
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-700 z-10" />
                   <img 
                     src={section.image} 
                     alt={section.title}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[1.5s] filter grayscale group-hover:grayscale-0"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[1.5s] filter grayscale group-hover:grayscale-0 rounded-[1.5rem]"
                   />
                 </div>
               </motion.div>
@@ -97,7 +97,7 @@ const Legacy = () => {
         </div>
 
       </div>
-    </main>
+    </section>
   );
 };
 

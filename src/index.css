@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,15 @@
 @layer base {
   body {
     @apply bg-white text-charcoal font-sans overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply backdrop-blur-xl bg-white/70 border border-white/50 rounded-[2rem] shadow-xl text-charcoal;
+  }
+  .glass-panel-hover {
+    @apply hover:bg-white/90 hover:border-white transition-all duration-500;
   }
 }
 

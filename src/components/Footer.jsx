@@ -14,14 +14,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-charcoal text-white pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-black/80 backdrop-blur-xl border-t border-white/10 text-white pt-24 pb-12 px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-6">
-            <div className="text-4xl font-display font-bold tracking-widest text-white flex uppercase">
-              <span className="text-corporate-red">AK</span>
+            <div className="text-4xl font-bold tracking-widest text-white flex uppercase drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+              <span className="text-corporate-red drop-shadow-[0_0_15px_rgba(225,29,72,0.5)]">AK</span>
               <span className="ml-2">Groups</span>
             </div>
             <p className="text-gray-400 max-w-sm font-medium leading-relaxed">
@@ -31,7 +31,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-lg font-display font-bold uppercase tracking-[0.2em] text-white">Navigation</h4>
+            <h4 className="text-lg font-bold uppercase tracking-[0.2em] text-white">Navigation</h4>
             <ul className="space-y-3 font-medium text-gray-400">
               <li><button onClick={() => handleNavClick('home')} className="hover:text-corporate-red transition-colors uppercase tracking-wide">Home</button></li>
               <li><button onClick={() => handleNavClick('ecosystem')} className="hover:text-corporate-red transition-colors uppercase tracking-wide">Ecosystem</button></li>
@@ -43,7 +43,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-6">
-            <h4 className="text-lg font-display font-bold uppercase tracking-[0.2em] text-white">Contact</h4>
+            <h4 className="text-lg font-bold uppercase tracking-[0.2em] text-white">Contact</h4>
             <ul className="space-y-3 font-medium text-gray-400">
               <li className="uppercase tracking-wide">AK Groups Complex</li>
               <li className="uppercase tracking-wide">Cumbum, TN, India</li>
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm font-medium">
             &copy; {new Date().getFullYear()} AK Groups. All rights reserved.
           </p>

@@ -44,7 +44,7 @@ const itemVariants = {
 
 const CoreValues = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-gray-200" id="core-values">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="core-values">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ const CoreValues = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tight text-charcoal uppercase">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-charcoal uppercase">
             The <span className="text-corporate-red">Pillars</span>
           </h2>
           <p className="mt-4 text-gray-500 font-medium tracking-widest uppercase text-sm">
@@ -65,7 +65,7 @@ const CoreValues = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"
         >
           {values.map((val) => {
             const Icon = val.icon;
@@ -73,15 +73,15 @@ const CoreValues = () => {
               <motion.div 
                 key={val.id}
                 variants={itemVariants}
-                className="bg-white p-8 border border-gray-200 shadow-sm hover:border-corporate-red/50 hover:shadow-[0_10px_30px_rgba(225,29,72,0.1)] transition-all duration-300 group flex flex-col items-center text-center"
+                className="glass-panel glass-panel-hover p-4 md:p-8 group flex flex-col items-center text-center hover:shadow-[0_0_20px_rgba(225,29,72,0.2)]"
               >
-                <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-corporate-red transition-colors duration-300">
-                  <Icon className="w-8 h-8 text-charcoal group-hover:text-white transition-colors duration-300" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-50 border border-gray-200 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:bg-corporate-red group-hover:border-corporate-red transition-all duration-300 shadow-sm shrink-0">
+                  <Icon className="w-6 h-6 md:w-8 md:h-8 text-charcoal group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-display font-bold text-charcoal mb-3 uppercase tracking-wide group-hover:text-corporate-red transition-colors duration-300">
+                <h3 className="text-sm md:text-xl font-bold text-charcoal mb-2 md:mb-3 uppercase tracking-wide group-hover:text-corporate-red transition-colors duration-300">
                   {val.title}
                 </h3>
-                <p className="text-gray-500 text-sm font-medium">
+                <p className="text-gray-500 text-[10px] md:text-sm font-medium leading-snug">
                   {val.description}
                 </p>
               </motion.div>
