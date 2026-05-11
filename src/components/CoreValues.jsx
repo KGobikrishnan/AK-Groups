@@ -44,7 +44,7 @@ const itemVariants = {
 
 const CoreValues = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="core-values">
+    <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="core-values">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

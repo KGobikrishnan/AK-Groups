@@ -15,7 +15,7 @@ const images = [
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = React.useState(null);
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden" id="gallery">
+    <section className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden" id="gallery">
       <motion.div
         initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

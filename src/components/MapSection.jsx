@@ -11,7 +11,7 @@ const locations = [
 
 const MapSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden" id="global-presence">
+    <section className="py-16 md:py-32 relative overflow-hidden" id="global-presence">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 mb-16 text-center">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}

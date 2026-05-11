@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full py-32 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative">
+    <section className="w-full py-16 md:py-32 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gray-50 to-transparent z-0 opacity-80"></div>
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
         

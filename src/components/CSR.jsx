@@ -21,7 +21,7 @@ const initiatives = [
 
 const CSR = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="csr">
+    <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="csr">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2 

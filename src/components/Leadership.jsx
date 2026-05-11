@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Leadership = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="leadership">
+    <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="leadership">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
         
         {/* Left: Image */}

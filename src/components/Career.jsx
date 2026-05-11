@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Career = () => {
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="career">
+    <section className="py-16 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden" id="career">
       {/* Background Graphic */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-corporate-red rounded-full mix-blend-screen filter blur-[100px]"></div>

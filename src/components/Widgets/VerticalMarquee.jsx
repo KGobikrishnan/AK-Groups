@@ -13,7 +13,7 @@ const newsItems = [
 
 const VerticalMarquee = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center glass-panel p-8 md:p-12">
         
         <div className="md:w-1/3">
