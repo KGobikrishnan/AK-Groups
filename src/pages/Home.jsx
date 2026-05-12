@@ -63,7 +63,7 @@ const Home = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <main className="w-full min-h-screen bg-white font-sans text-charcoal">
+    <main className="w-full min-h-screen bg-white font-sans text-charcoal overflow-x-hidden">
       {/* Boxed Hero Section */}
       <div className="pt-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-24">
         <section id="home" className="relative w-full aspect-[16/9] md:h-[70vh] rounded-[1.5rem] md:rounded-[2rem] flex flex-col items-center justify-center overflow-hidden bg-black shadow-2xl">

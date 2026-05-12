@@ -113,6 +113,7 @@ const Ecosystem = () => {
                     src={business.image} 
                     alt={business.name}
                     className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-[2s] ease-out grayscale group-hover:grayscale-0"
+                    loading="lazy"
                 />
                 
                 {/* Float Badge */}

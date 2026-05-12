@@ -19,6 +19,7 @@ const Leadership = () => {
               src="/images/owner.webp" 
               alt="CEO Portrait" 
               className="w-full h-full object-cover"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-corporate-red/10 mix-blend-multiply" />
           </div>

@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Brand Col */}
           <div className="col-span-2 space-y-6">
             <div className="flex items-center gap-2 uppercase">
-              <img src="/images/logo.png" alt="AK Logo" className="h-12 md:h-16 w-auto object-contain" />
+              <img src="/images/logo.png" alt="AK Logo" className="h-12 md:h-16 w-auto object-contain" loading="lazy" />
               <span className="text-4xl font-bold tracking-widest text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">Groups</span>
             </div>
             <p className="text-gray-400 max-w-sm font-medium leading-relaxed">
