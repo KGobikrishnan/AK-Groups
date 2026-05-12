@@ -8,14 +8,13 @@ const Navbar = () => {
 
   const navLinks = [
     { id: 'ecosystem', label: 'Ecosystem' },
-    { id: 'legacy', label: 'Legacy' },
     { id: 'gallery', label: 'Gallery' },
     { id: 'contact', label: 'Global Contact' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'ecosystem', 'legacy', 'gallery', 'contact'];
+      const sections = ['home', 'ecosystem', 'gallery', 'contact'];
       let current = 'home';
       
       for (const section of sections) {
@@ -53,9 +52,9 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Logo Section */}
         <button onClick={() => handleNavClick('home')} className="flex items-center gap-2 group focus:outline-none">
-          <div className="text-2xl font-bold tracking-tighter text-charcoal flex uppercase">
-            <span className="text-corporate-red">AK</span>
-            <span className="ml-1 opacity-90 group-hover:opacity-100 transition-opacity">Groups</span>
+          <div className="flex items-center gap-2 uppercase">
+            <img src="/images/logo.png" alt="AK Logo" className="h-10 md:h-12 w-auto object-contain" />
+            <span className="text-2xl font-bold tracking-tighter text-charcoal opacity-90 group-hover:opacity-100 transition-opacity">Groups</span>
           </div>
         </button>
 

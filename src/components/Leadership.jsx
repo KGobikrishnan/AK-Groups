@@ -16,7 +16,7 @@ const Leadership = () => {
         >
           <div className="relative aspect-[4/5] overflow-hidden grayscale contrast-125 glass-panel p-2">
             <img 
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop" 
+              src="/images/owner.webp" 
               alt="CEO Portrait" 
               className="w-full h-full object-cover"
             />

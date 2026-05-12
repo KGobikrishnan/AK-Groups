@@ -41,15 +41,15 @@ const Contact = () => {
           <div className="space-y-8 mt-12 border-l border-corporate-red/50 pl-6">
             <div>
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">Command Center</h3>
-              <p className="text-gray-500 font-medium">AK Groups Complex,<br />Cumbum, Tamil Nadu, India</p>
+              <p className="text-gray-500 font-medium">Indira colony, C.Pudupatti,<br />Cumbum - 625556, Theni (Dt)</p>
             </div>
             <div>
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">Direct Secure Line</h3>
-              <p className="text-gray-500 font-medium">+91 (123) 456-7890</p>
+              <p className="text-gray-500 font-medium">+91 93622 25555<br />+91 97881 11666</p>
             </div>
             <div>
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-1">Transmissions</h3>
-              <p className="text-gray-500 font-medium">info@akgroups.com</p>
+              <p className="text-gray-500 font-medium lowercase">akcumbum@gmail.com</p>
             </div>
           </div>
         </motion.div>

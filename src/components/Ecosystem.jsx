@@ -9,6 +9,7 @@ const businesses = [
     description: 'Premium diesel exhaust fluid solutions for sustainable operations.',
     link: 'https://adblue.akcumbum.com/',
     tag: 'Sustainability',
+    image: '/images/AK-Adblue.png',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const businesses = [
     description: 'Logistics and heavy transport excellence across regions.',
     link: 'https://transport.akcumbum.com/',
     tag: 'Logistics',
+    image: '/images/AK-transports.png',
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ const businesses = [
     description: 'Building the future with precision engineering and design.',
     link: 'https://construction.akcumbum.com/',
     tag: 'Infrastructure',
+    image: '/images/AK-construction.png',
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const businesses = [
     description: 'High-quality construction materials and raw supply chain.',
     link: 'https://material.akcumbum.com/',
     tag: 'Supply',
+    image: '/images/AK-material.png',
   },
   {
     id: 5,
@@ -37,6 +41,7 @@ const businesses = [
     description: 'Automotive mastery and premium servicing hub.',
     link: 'https://motors.akcumbum.com/',
     tag: 'Automotive',
+    image: '/images/AK-motors.png',
   },
 ];
 
@@ -85,7 +90,7 @@ const Ecosystem = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
-        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"
       >
         {businesses.map((business, index) => (
           <motion.a
@@ -96,35 +101,52 @@ const Ecosystem = () => {
             variants={cardVariants}
             whileHover={{ 
               y: -10, 
-              scale: 1.02, 
             }}
-            className={`group relative flex flex-col justify-between p-4 md:p-8 glass-panel glass-panel-hover overflow-hidden cursor-pointer ${
-              index === 3 ? 'col-span-1 lg:col-span-2' : ''
-            } ${index === 4 ? 'col-span-2 lg:col-span-1' : 'col-span-1'}`}
+            className={`group relative flex flex-col glass-panel glass-panel-hover overflow-hidden cursor-pointer h-[450px] md:h-[550px] ${
+              index === 3 ? 'lg:col-span-2' : ''
+            }`}
           >
-            {/* Glow Effect */}
-            <div className="absolute inset-0 border-2 border-transparent group-hover:border-corporate-red/30 transition-colors duration-500 z-20 pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-br from-corporate-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
-            
-            <div className="z-10 flex flex-col h-full">
-              <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6 md:mb-12">
-                <span className="inline-block px-3 py-1 bg-white/50 border border-gray-200 text-[10px] md:text-xs font-bold tracking-widest text-gray-500 group-hover:border-corporate-red group-hover:text-white group-hover:bg-corporate-red transition-all duration-300 uppercase rounded-full shadow-sm text-center">
-                  {business.tag}
-                </span>
-                <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-white/50 border border-gray-200 flex items-center justify-center group-hover:bg-corporate-red group-hover:border-corporate-red transition-all duration-300 backdrop-blur-md shadow-sm shrink-0">
-                  <ArrowRight className="w-4 h-4 md:w-6 md:h-6 text-gray-400 group-hover:text-white transform group-hover:-rotate-45 transition-all duration-300" />
+            {/* Image Section - The "Website Car" look */}
+            <div className="relative h-2/3 overflow-hidden bg-gray-100 border-b border-gray-200">
+                <div className="absolute inset-0 bg-black/5 z-10 group-hover:bg-transparent transition-colors duration-500" />
+                <img 
+                    src={business.image} 
+                    alt={business.name}
+                    className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-[2s] ease-out grayscale group-hover:grayscale-0"
+                />
+                
+                {/* Float Badge */}
+                <div className="absolute top-4 left-4 z-20">
+                    <span className="px-4 py-1.5 bg-white/90 backdrop-blur-md border border-white/50 text-[10px] font-bold tracking-widest text-charcoal uppercase rounded-full shadow-lg group-hover:bg-corporate-red group-hover:text-white group-hover:border-corporate-red transition-all duration-300">
+                        {business.tag}
+                    </span>
                 </div>
-              </div>
-              
-              <div className="mt-auto">
-                <h3 className="text-xl md:text-3xl font-bold text-charcoal mb-2 md:mb-3 group-hover:text-corporate-red transition-colors duration-300 uppercase tracking-wide">
+
+                {/* Arrow Button Overlay */}
+                <div className="absolute bottom-4 right-4 z-20 translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <div className="w-12 h-12 rounded-full bg-corporate-red flex items-center justify-center text-white shadow-xl">
+                        <ArrowRight className="w-6 h-6 -rotate-45" />
+                    </div>
+                </div>
+            </div>
+            
+            {/* Content Section */}
+            <div className="p-6 md:p-8 flex flex-col justify-center flex-grow bg-white/50 backdrop-blur-sm relative z-10">
+                <div className="absolute top-0 left-0 w-1 h-0 bg-corporate-red group-hover:h-full transition-all duration-700" />
+                <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 group-hover:text-corporate-red transition-colors duration-300 uppercase tracking-tight">
                   {business.name}
                 </h3>
-                <p className="text-gray-500 leading-snug md:leading-relaxed text-xs md:text-sm font-medium">
+                <p className="text-gray-500 leading-relaxed text-sm md:text-base font-medium">
                   {business.description}
                 </p>
-              </div>
+                
+                <div className="mt-4 flex items-center gap-2 text-corporate-red font-bold text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    Explore Platform <ExternalLink className="w-3 h-3" />
+                </div>
             </div>
+
+            {/* Glow Effect */}
+            <div className="absolute inset-0 border-2 border-transparent group-hover:border-corporate-red/20 transition-colors duration-500 z-30 pointer-events-none rounded-[2rem]" />
           </motion.a>
         ))}
       </motion.div>

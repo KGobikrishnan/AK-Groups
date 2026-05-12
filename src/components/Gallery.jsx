@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
 const images = [
-  { id: 1, src: "https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop", span: "md:col-span-2 md:row-span-2", specs: { location: "Cumbum HQ", duration: "18 Months", materials: "Reinforced Steel, Concrete" } },
-  { id: 2, src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop", span: "md:col-span-1 md:row-span-1", specs: { location: "Madurai Hub", duration: "12 Months", materials: "Glass, Aluminum Panels" } },
-  { id: 3, src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop", span: "md:col-span-1 md:row-span-1", specs: { location: "Theni Plant", duration: "Ongoing", materials: "Heavy Machinery, Adblue" } },
-  { id: 4, src: "https://images.unsplash.com/photo-1503375894314-47671041dd9e?q=80&w=2070&auto=format&fit=crop", span: "md:col-span-2 md:row-span-1", specs: { location: "Chennai Port", duration: "24 Months", materials: "Asphalt, Concrete" } },
-  { id: 5, src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop", span: "md:col-span-1 md:row-span-2", specs: { location: "Coimbatore", duration: "6 Months", materials: "Structural Steel" } },
-  { id: 6, src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop", span: "md:col-span-1 md:row-span-1", specs: { location: "Kochi Logistics", duration: "14 Months", materials: "Transport Fleet" } },
-  { id: 7, src: "https://images.unsplash.com/photo-1532054944111-2eb265e315cb?q=80&w=2070&auto=format&fit=crop", span: "md:col-span-1 md:row-span-1", specs: { location: "Salem Unit", duration: "8 Months", materials: "Raw Cement" } },
+  { id: 1, src: "/gallery/g1.webp", span: "col-span-2 row-span-2", specs: { location: "Cumbum HQ", duration: "18 Months", materials: "Reinforced Steel, Concrete" } },
+  { id: 2, src: "/gallery/g2.webp", span: "col-span-1 row-span-1", specs: { location: "Madurai Hub", duration: "12 Months", materials: "Glass, Aluminum Panels" } },
+  { id: 3, src: "/gallery/g3.jpeg", span: "col-span-1 row-span-1", specs: { location: "Theni Plant", duration: "Ongoing", materials: "Heavy Machinery, Adblue" } },
+  { id: 4, src: "/gallery/g4.jpeg", span: "col-span-2 row-span-1", specs: { location: "Chennai Port", duration: "24 Months", materials: "Asphalt, Concrete" } },
+  { id: 5, src: "/gallery/g5.png", span: "col-span-1 row-span-2", specs: { location: "Coimbatore", duration: "6 Months", materials: "Structural Steel" } },
+  { id: 6, src: "/gallery/g6.png", span: "col-span-1 row-span-1", specs: { location: "Kochi Logistics", duration: "14 Months", materials: "Transport Fleet" } },
+  { id: 8, src: "/gallery/g8.jpeg", span: "col-span-1 row-span-1", specs: { location: "Salem Unit", duration: "8 Months", materials: "Raw Cement" } },
 ];
 
 const Gallery = () => {
@@ -30,7 +30,7 @@ const Gallery = () => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-3 gap-2 md:gap-4 h-auto md:h-[800px]">
+      <div className="grid grid-cols-4 grid-rows-3 gap-1 md:gap-4 h-[400px] md:h-[800px]">
         {images.map((image, index) => (
           <motion.div
             key={image.id}
@@ -39,18 +39,18 @@ const Gallery = () => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: index * 0.1, duration: 0.6 }}
             onClick={() => setSelectedImage(image)}
-            className={`relative overflow-hidden group glass-panel p-1 md:p-2 cursor-pointer aspect-square md:aspect-auto ${image.span}`}
+            className={`relative overflow-hidden group glass-panel p-0.5 md:p-2 cursor-pointer ${image.span}`}
           >
-            <div className="absolute inset-0 bg-corporate-red/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none rounded-[1rem] md:rounded-[1.5rem]" />
+            <div className="absolute inset-0 bg-corporate-red/10 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none rounded-[0.5rem] md:rounded-[1.5rem]" />
             <img 
               src={image.src} 
               alt={`Gallery Image ${image.id}`}
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] rounded-[1rem] md:rounded-[1.5rem]"
+              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] rounded-[0.5rem] md:rounded-[1.5rem]"
               loading="lazy"
             />
             {/* Overlay hint */}
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-center justify-center rounded-[1rem] md:rounded-[1.5rem]">
-              <span className="text-white font-bold tracking-widest uppercase text-[8px] md:text-sm border border-white/50 px-2 py-1 md:px-4 md:py-2 hover:bg-white hover:text-black transition-colors">
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 flex items-center justify-center rounded-[0.5rem] md:rounded-[1.5rem]">
+              <span className="text-white font-bold tracking-widest uppercase text-[6px] md:text-sm border border-white/50 px-1 py-0.5 md:px-4 md:py-2 hover:bg-white hover:text-black transition-colors">
                 View
               </span>
             </div>
